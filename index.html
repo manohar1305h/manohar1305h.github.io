@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manohar Kumar Jha - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: fadeInUp 1s;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 20px auto;
+            opacity: 0.95;
+        }
+        
+        .btn-group {
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .project-card .tagline {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .tech-stack {
+            margin: 15px 0;
+            font-size: 0.9rem;
+            color: #764ba2;
+            font-weight: bold;
+        }
+        
+        /* Timeline */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            padding: 20px;
+            background: white;
+            border-left: 3px solid #667eea;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Manohar Kumar Jha</h1>
+            <p class="subtitle">Aspiring Software & Data Engineer | Python, Java, Problem Solving</p>
+            <p>I am a Computer Science undergraduate at Lovely Professional University with a strong focus on Python development, problem-solving, and analytical projects. I enjoy building games, data-driven applications, and web-based solutions that turn ideas into usable products.</p>
+            <div class="btn-group">
+                <a href="https://github.com/manohar1305h" class="btn" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/manohar-jha-/" class="btn" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>C, C++, Java, JavaScript, Python</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Web & UI</h3>
+                    <p>HTML, CSS, Responsive Web Design (freeCodeCamp certified)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data & Tools</h3>
+                    <p>MySQL, Excel, Power BI, Jupyter Notebook, Pandas, NumPy, Matplotlib</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <p>Problem Solving, Team Player, Project Management, Competitive Coding Mindset</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Classic Snake Game</h3>
+                    <p class="tagline">A retro-style Snake game with smooth controls</p>
+                    <p>Built a classic Snake game using Python and Pygame with smooth movement and responsive keyboard controls. Implemented grid-based movement, food generation, snake growth, scoring, and collision detection.</p>
+                    <p class="tech-stack">Tech: Python, Pygame</p>
+                    <a href="https://github.com/manohar1305h/snake-game" class="btn" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>RegiAnalytics</h3>
+                    <p class="tagline">Vehicle Registration Analysis Platform</p>
+                    <p>Developed an analytical platform to explore, interpret, and visualize vehicle registration data. Cleaned and processed large datasets to identify trends in vehicle types, registration volumes, and regional distribution.</p>
+                    <p class="tech-stack">Tech: Python, Jupyter, Pandas, NumPy, Matplotlib</p>
+                    <a href="https://github.com/manohar1305h/Vechile-regestration" class="btn" target="_blank">View Project</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Student Performance Prediction</h3>
+                    <p class="tagline">ML-powered web app for academic prediction</p>
+                    <p>Built a web application using Django and HTML/CSS to predict student performance based on various academic and personal factors. Implemented a machine learning pipeline for data preprocessing, training, and prediction.</p>
+                    <p class="tech-stack">Tech: Python, Django, HTML, CSS, ML</p>
+                    <a href="https://github.com/manohar1305h/Student-Performance-Prediction" class="btn" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Secure File Management System</h3>
+                    <p class="tagline">Encrypted file storage with access control</p>
+                    <p>Implemented a Python-based secure file management system with user authentication, access control, encryption, and basic threat detection. Enabled users to store, read, and list encrypted files.</p>
+                    <p class="tech-stack">Tech: Python</p>
+                    <a href="https://github.com/manohar1305h/Secure-File-Management-System-Project" class="btn" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training">
+        <div class="container">
+            <h2>Training & Certificates</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Placement Ace: Java Bootcamp</h3>
+                    <p><strong>Lovely Professional University | Jul 2025 - Aug 2025</strong></p>
+                    <p>Practiced daily DSA problem-solving with focus on efficiency and optimization. Worked on arrays, strings, recursion, dynamic programming, greedy algorithms, and graphs.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Key Certificates</h3>
+                    <ul>
+                        <li>Python Fundamentals - Infosys</li>
+                        <li>Build Generative AI Apps with No-Code Tools - Infosys</li>
+                        <li>Master Generative AI & Tools - Infosys</li>
+                        <li>Computational Theory: Language Principle & Finite Automata - Infosys</li>
+                        <li>Responsive Web Design - freeCodeCamp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Bachelor of Technology - Computer Science and Engineering</h3>
+                    <p><strong>Lovely Professional University, Jalandhar, Punjab</strong></p>
+                    <p>Aug 2023 - Present | CGPA: 6.49</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Intermediate</h3>
+                    <p><strong>Public School, Darbhanga, Bihar</strong></p>
+                    <p>Percentage: 65.2% (2022-2023)</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Matriculation</h3>
+                    <p><strong>Jesus & Mary Academy, Darbhanga, Bihar</strong></p>
+                    <p>Percentage: 60.2% (2020-2021)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:mjha932466@gmail.com">mjha932466@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/manohar-jha-/" target="_blank">View Profile</a>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/manohar1305h" target="_blank">@manohar1305h</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>Jalandhar, Punjab, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
