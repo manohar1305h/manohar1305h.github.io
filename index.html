@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\"><circle cx=\"10\" cy=\"10\" r=\"8\" fill=\"none\" stroke=\"%23667eea\" stroke-width=\"2\"/></svg>') 10 10, auto;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -60,6 +61,7 @@
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"%23764ba2\" stroke-width=\"2\"/></svg>') 12 12, pointer;
         }
         section {
             padding: 80px 0;
@@ -104,6 +106,8 @@
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
         }
         .project-card:hover {
             transform: translateY(-10px);
@@ -116,6 +120,10 @@
         .project-card .tagline {
             font-style: italic;
             color: #666;
+            margin-bottom: 15px;
+        }
+        .project-card .description {
+            flex-grow: 1;
             margin-bottom: 15px;
         }
         .tech-stack {
@@ -166,35 +174,35 @@
 </head>
 <body>
 
-    <section class="hero">
-        <div class="container">
+    <section class=\"hero\">
+        <div class=\"container\">
             <h1>Manohar Kumar Jha</h1>
-            <p class="subtitle">Aspiring Software & Data Engineer | Python, Java, Problem Solving</p>
+            <p class=\"subtitle\">Aspiring Software & Data Engineer | Python, Java, Problem Solving</p>
             <p>I am a Computer Science undergraduate at Lovely Professional University with a strong focus on Python development, problem-solving, and analytical projects. I enjoy building games, data-driven applications, and web-based solutions that turn ideas into usable products.</p>
-            <div class="btn-group">
-                <a href="https://github.com/manohar1305h" class="btn" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/manohar-jha-/" class="btn" target="_blank">LinkedIn</a>
+            <div class=\"btn-group\">
+                <a href=\"https://github.com/manohar1305h\" class=\"btn\" target=\"_blank\">GitHub</a>
+                <a href=\"https://www.linkedin.com/in/manohar-jha-/\" class=\"btn\" target=\"_blank\">LinkedIn</a>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
+    <section id=\"skills\">
+        <div class=\"container\">
             <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
+            <div class=\"skills-grid\">
+                <div class=\"skill-card\">
                     <h3>Programming Languages</h3>
                     <p>C, C++, Java, JavaScript, Python</p>
                 </div>
-                <div class="skill-card">
+                <div class=\"skill-card\">
                     <h3>Web & UI</h3>
                     <p>HTML, CSS, Responsive Web Design (freeCodeCamp certified)</p>
                 </div>
-                <div class="skill-card">
+                <div class=\"skill-card\">
                     <h3>Data & Tools</h3>
                     <p>MySQL, Excel, Power BI, Jupyter Notebook, Pandas, NumPy, Matplotlib</p>
                 </div>
-                <div class="skill-card">
+                <div class=\"skill-card\">
                     <h3>Soft Skills</h3>
                     <p>Problem Solving, Team Player, Project Management, Competitive Coding Mindset</p>
                 </div>
@@ -202,58 +210,71 @@
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
+    <section id=\"projects\">
+        <div class=\"container\">
             <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
+            <div class=\"projects-grid\">
+                <div class=\"project-card\">
                     <h3>Classic Snake Game</h3>
-                    <p class="tagline">A retro-style Snake game with smooth controls</p>
-                    <p>Built a classic Snake game using Python and Pygame with smooth movement and responsive keyboard controls. Implemented grid-based movement, food generation, snake growth, scoring, and collision detection.</p>
-                    <p class="tech-stack">Tech: Python, Pygame</p>
-                    <a href="https://github.com/manohar1305h/snake-game" class="btn" target="_blank">View on GitHub</a>
+                    <p class=\"tagline\">Retro-style Python game</p>
+                    <p class=\"description\">A classic Snake game built with Python and Pygame featuring smooth movement, scoring, and collision detection.</p>
+                    <p class=\"tech-stack\">Tech: Python, Pygame</p>
+                    <a href=\"https://github.com/manohar1305h/snake-game\" class=\"btn\" target=\"_blank\">View GitHub</a>
                 </div>
-                <div class="project-card">
-                    <h3>RegiAnalytics</h3>
-                    <p class="tagline">Vehicle Registration Analysis Platform</p>
-                    <p>Developed an analytical platform to explore, interpret, and visualize vehicle registration data. Cleaned and processed large datasets to identify trends in vehicle types, registration volumes, and regional distribution.</p>
-                    <p class="tech-stack">Tech: Python, Jupyter, Pandas, NumPy, Matplotlib</p>
-                    <a href="https://github.com/manohar1305h/Vechile-regestration" class="btn" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
+                <div class=\"project-card\">
                     <h3>Student Performance Prediction</h3>
-                    <p class="tagline">ML-powered web app for academic prediction</p>
-                    <p>Built a web application using Django and HTML/CSS to predict student performance based on various academic and personal factors. Implemented a machine learning pipeline for data preprocessing, training, and prediction.</p>
-                    <p class="tech-stack">Tech: Python, Django, HTML, CSS, ML</p>
-                    <a href="https://github.com/manohar1305h/Student-Performance-Prediction" class="btn" target="_blank">View on GitHub</a>
+                    <p class=\"tagline\">ML-powered web app</p>
+                    <p class=\"description\">Predicts student academic performance using Django and Machine Learning based on input factors.</p>
+                    <p class=\"tech-stack\">Tech: Python, Django, ML</p>
+                    <a href=\"https://github.com/manohar1305h/Student-Performance-Prediction\" class=\"btn\" target=\"_blank\">View GitHub</a>
                 </div>
-                <div class="project-card">
-                    <h3>Secure File Management System</h3>
-                    <p class="tagline">Encrypted file storage with access control</p>
-                    <p>Implemented a Python-based secure file management system with user authentication, access control, encryption, and basic threat detection. Enabled users to store, read, and list encrypted files.</p>
-                    <p class="tech-stack">Tech: Python</p>
-                    <a href="https://github.com/manohar1305h/Secure-File-Management-System-Project" class="btn" target="_blank">View on GitHub</a>
+                <div class=\"project-card\">
+                    <h3>EV-python-project</h3>
+                    <p class=\"tagline\">Electric Vehicle EDA</p>
+                    <p class=\"description\">Exploratory Data Analysis on electric vehicle trends using real-world datasets and visualizations.</p>
+                    <p class=\"tech-stack\">Tech: Python, Pandas, Matplotlib</p>
+                    <a href=\"https://github.com/manohar1305h/EV-python-project\" class=\"btn\" target=\"_blank\">View GitHub</a>
+                </div>
+                <div class=\"project-card\">
+                    <h3>RegiAnalytics</h3>
+                    <p class=\"tagline\">Vehicle Registration Analysis</p>
+                    <p class=\"description\">Analytical platform to explore and visualize regional vehicle registration distribution trends.</p>
+                    <p class=\"tech-stack\">Tech: Python, Jupyter, Pandas</p>
+                    <a href=\"https://github.com/manohar1305h/Vechile-regestration\" class=\"btn\" target=\"_blank\">View GitHub</a>
+                </div>
+                <div class=\"project-card\">
+                    <h3>Vehicle Registration Summary</h3>
+                    <p class=\"tagline\">Data Interpretation</p>
+                    <p class=\"description\">Summarized reporting and analysis of vehicle registration data for the year 2025.</p>
+                    <p class=\"tech-stack\">Tech: Python, Data Analysis</p>
+                    <a href=\"https://github.com/manohar1305h/vechile-registration-summary-2025\" class=\"btn\" target=\"_blank\">View GitHub</a>
+                </div>
+                <div class=\"project-card\">
+                    <h3>Secure File Management</h3>
+                    <p class=\"tagline\">Encrypted storage system</p>
+                    <p class=\"description\">Python-based system with authentication and encryption for secure storage and threat detection.</p>
+                    <p class=\"tech-stack\">Tech: Python, Cryptography</p>
+                    <a href=\"https://github.com/manohar1305h/Secure-File-Management-System-Project\" class=\"btn\" target=\"_blank\">View GitHub</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="training">
-        <div class="container">
+    <section id=\"training\">
+        <div class=\"container\">
             <h2>Training & Certificates</h2>
-            <div class="timeline">
-                <div class="timeline-item">
+            <div class=\"timeline\">
+                <div class=\"timeline-item\">
                     <h3>Placement Ace: Java Bootcamp</h3>
                     <p><strong>Lovely Professional University | Jul 2025 - Aug 2025</strong></p>
-                    <p>Practiced daily DSA problem-solving with focus on efficiency and optimization. Worked on arrays, strings, recursion, dynamic programming, greedy algorithms, and graphs.</p>
+                    <p>Daily DSA problem-solving with focus on efficiency, dynamic programming, and graphs.</p>
                 </div>
-                <div class="timeline-item">
+                <div class=\"timeline-item\">
                     <h3>Key Certificates</h3>
                     <ul>
                         <li>Python Fundamentals - Infosys</li>
-                        <li>Build Generative AI Apps with No-Code Tools - Infosys</li>
-                        <li>Master Generative AI & Tools - Infosys</li>
-                        <li>Computational Theory: Language Principle & Finite Automata - Infosys</li>
+                        <li>Generative AI & No-Code Tools - Infosys</li>
+                        <li>Computational Theory & Automata - Infosys</li>
                         <li>Responsive Web Design - freeCodeCamp</li>
                     </ul>
                 </div>
@@ -261,48 +282,39 @@
         </div>
     </section>
 
-    <section id="education">
-        <div class="container">
+    <section id=\"education\">
+        <div class=\"container\">
             <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Bachelor of Technology - Computer Science and Engineering</h3>
-                    <p><strong>Lovely Professional University, Jalandhar, Punjab</strong></p>
-                    <p>Aug 2023 - Present | CGPA: 6.49</p>
+            <div class=\"timeline\">
+                <div class=\"timeline-item\">
+                    <h3>Bachelor of Technology - CSE</h3>
+                    <p><strong>Lovely Professional University, Jalandhar</strong></p>
+                    <p>2023 - Present | CGPA: 6.49</p>
                 </div>
-                <div class="timeline-item">
+                <div class=\"timeline-item\">
                     <h3>Intermediate</h3>
-                    <p><strong>Public School, Darbhanga, Bihar</strong></p>
-                    <p>Percentage: 65.2% (2022-2023)</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Matriculation</h3>
-                    <p><strong>Jesus & Mary Academy, Darbhanga, Bihar</strong></p>
-                    <p>Percentage: 60.2% (2020-2021)</p>
+                    <p><strong>Public School, Darbhanga</strong></p>
+                    <p>65.2% (2023)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
+    <section id=\"contact\">
+        <div class=\"container\">
             <h2>Contact Me</h2>
-            <div class="contact-info">
-                <div class="contact-item">
+            <div class=\"contact-info\">
+                <div class=\"contact-item\">
                     <h3>Email</h3>
-                    <a href="mailto:mjha932466@gmail.com">mjha932466@gmail.com</a>
+                    <a href=\"mailto:mjha932466@gmail.com\">mjha932466@gmail.com</a>
                 </div>
-                <div class="contact-item">
+                <div class=\"contact-item\">
                     <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/manohar-jha-/" target="_blank">View Profile</a>
+                    <a href=\"https://www.linkedin.com/in/manohar-jha-/\" target=\"_blank\">View Profile</a>
                 </div>
-                <div class="contact-item">
+                <div class=\"contact-item\">
                     <h3>GitHub</h3>
-                    <a href="https://github.com/manohar1305h" target="_blank">@manohar1305h</a>
-                </div>
-                <div class="contact-item">
-                    <h3>Location</h3>
-                    <p>Jalandhar, Punjab, India</p>
+                    <a href=\"https://github.com/manohar1305h\" target=\"_blank\">@manohar1305h</a>
                 </div>
             </div>
         </div>
